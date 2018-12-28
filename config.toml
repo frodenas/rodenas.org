@@ -1,0 +1,6 @@
+baseURL = "https://rodenas.org/"
+languageCode = "en-us"
+googleAnalytics = "UA-88748-1"
+
+[params]
+  verifyV1 = "gLQiua3aPM/F1rGBlT0VfVkAM69VOtdt/ZhLbcCIljs="
