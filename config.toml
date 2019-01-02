@@ -1,6 +1,38 @@
 baseURL = "https://rodenas.org/"
 languageCode = "en-us"
+removePathAccents = true
 googleAnalytics = "UA-88748-1"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = false
+    anonymizeIP = false
+    respectDoNotTrack = true
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
 
 [params]
   verifyV1 = "gLQiua3aPM/F1rGBlT0VfVkAM69VOtdt/ZhLbcCIljs="
+
+[permalinks]
+  fbtags = "/ferdyblog/tags/:slug/"
+  fbcategories = "/ferdyblog/categories/:slug/"
+  fb2011 = "/ferdyblog/2011/:slug/"
+
+[taxonomies]
+  fbtag = "fbtags"
+  fbcategory = "fbcategories"
+  fb2011 = "fb2011"

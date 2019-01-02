@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+	<meta name="robots" content="index,follow" />
+	<link rel="stylesheet" type="text/css" media="all" href="/ferdyblog/css/style.css" />
+	<link rel="shortcut icon" href="/ferdyblog/images/favicon.ico" type="image/x-icon" />
+
+	{{ with .Params.title -}}
+	<title>{{ . }}</title>
+	<meta name="DC.title" content="{{ . }}">
+	{{- else -}}
+	<title>El diario de Ferdy</title>
+	<meta name="DC.title" content="El diario de Ferdy">
+	{{- end -}}
+	{{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+</head>
+
+<body class="home blog paged">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+				<h1 id="site-title"><span><a href="/ferdyblog" title="El diario de Ferdy" rel="home">El diario de Ferdy</a></span></h1>
+				<div id="site-description">Reflexiones personales de Ferran Rodenas</div>		
+				<img src="/ferdyblog/images/inkwell.jpg" width="940" height="198" alt="" />
+			</div><!-- #branding -->
+					
+			<div id="access" role="navigation">
+				<div class="menu">
+					<ul><li class="current_page_item"><a href="/ferdyblog/">Inicio</a></li><li class="page_item page-item-2"><a href="/ferdyblog/acerca-de/">Acerca de</a></li></ul>
+				</div>
+			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">

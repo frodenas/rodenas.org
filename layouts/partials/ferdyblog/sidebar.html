@@ -1,0 +1,82 @@
+<div id="primary" class="widget-area" role="complementary">
+    <ul class="xoxo">    
+        <li class="widget-container widget_search">
+            <form role="search" method="get" id="searchform" class="searchform" action="https://google.com/search">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="search" value="" name="q" id="s" />
+                    <input type="submit" id="searchsubmit" value="Buscar" />
+                    <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}ferdyblog" />
+				</div>
+            </form>
+        </li>
+
+        <li class="widget-container widget_text">
+            <h3 class="widget-title">Sígueme en:</h3>
+            <div class="textwidget"><br />
+                <p>
+                <a href="http://feeds.feedburner.com/FerdyBlog" title="RSS del Diario de Ferdy" rel="me"><img src="/ferdyblog/images/mini_rss.gif" border="0" alt="RSS del Diario de Ferdy" /></a> 
+                &nbsp;
+                <a href="http://twitter.com/ferdy" title="Ferdy at Twitter" rel="me"><img src="/ferdyblog/images/ico_twitter.gif" border="0" alt="Ferdy at Twitter" /></a> 
+                &nbsp;
+                <a href="http://www.facebook.com/frodenas" title="Ferdy at Facebook" rel="me"><img src="/ferdyblog/images/ico_facebook.gif" border="0" alt="Ferdy at Facebook" /></a> 
+                &nbsp;
+                <a href="http://www.linkedin.com/in/frodenas" title="Ferdy at LinkedIn" rel="me"><img src="/ferdyblog/images/ico_linkedin.gif" border="0" alt="Ferdy at LinkedIn" /></a> 
+                &nbsp;
+                <a href="http://del.icio.us/frodenas" title="Ferdy at del.icio.us" rel="me"><img src="/ferdyblog/images/ico_delicious.gif" border="0" alt="Ferdy at del.icio.us" /></a> 
+                &nbsp;
+                <a href="http://www.flickr.com/photos/ferranrodenas/" title="Ferdy at Flickr" rel="me"><img src="/ferdyblog/images/ico_flickr.gif" border="0" alt="Ferdy at Flickr" /></a> 
+                </p>
+            </div>
+		</li>
+
+        {{- if gt (len .Site.Taxonomies.fbtags) 0 -}}
+            {{- $fontUnit := "pt" -}}
+            {{- $largestFontSize := 20 -}}
+            {{- $smallestFontSize := 8 -}}
+            {{- $fontSpread := sub $largestFontSize $smallestFontSize -}}
+            {{- $max := add (len (index .Site.Taxonomies.fbtags.ByCount 0).Pages) 1 -}}
+            {{- $min := len (index .Site.Taxonomies.fbtags.ByCount.Reverse 0).Pages -}}
+            {{- $spread := sub $max $min }}
+            {{- $fontStep := div $fontSpread $spread -}}
+
+            <li class="widget-container widget_tag_cloud">
+                <h3 class="widget-title">Etiquetas</h3>
+                <div class="tagcloud">
+                    <ul class='wp-tag-cloud' role='list'>
+                    {{- range $name, $taxonomy := .Site.Taxonomies.fbtags -}}
+                        {{- $currentTagCount := len $taxonomy.Pages -}}
+                        {{- $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) -}}
+                        {{- $count := len $taxonomy.Pages -}}
+                        {{- $weigth := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) -}}
+                        {{- $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth) ) -}}
+                        <li><a href="{{ "/ferdyblog/tags/" | relLangURL }}{{ $name | urlize }}" class="tag-cloud-link" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }}</a></li>&nbsp;
+                    {{- end -}}
+                    </ul>
+                </div>
+            </li>
+        {{- end -}}
+        
+        {{- if gt (len .Site.Taxonomies.fb2011) 0 -}}
+        <li class="widget-container widget_archive">
+            <h3 class="widget-title">Archivos</h3>
+            <ul>
+            {{- range $name, $taxonomy := .Site.Taxonomies.fb2011 -}}
+                {{- $datename := (index $taxonomy.Pages 0).Date.Format "January 2006" -}}
+                <li><a href="{{ "/ferdyblog/2011/" | relLangURL }}{{ $name | urlize }}/">{{ $datename }}</a>&nbsp;({{ len .Pages }})</li>
+            {{- end -}}
+            </ul>
+        </li>
+        {{- end -}}
+        
+        <li class="widget-container widget_links">
+            <h3 class="widget-title">Sitios de interés</h3>
+            <ul class='xoxo blogroll'>
+                <li><a href="http://lapastillaroja.net/" title="Software Libre">La Pastilla Roja</a></li>
+                <li><a href="http://www.nubeblog.com/" title="El blog sobre cloud computing, cloud storage e infraestructuras como servicios">Nubeblog</a></li>
+                <li><a href="http://brigomp.blogspot.com/" title="Blog acerca de informática, tecnología, negocios, etc">Pensamientos ágiles</a></li>
+                <li><a href="http://www.rodenas.org/blog/" title="Software Development Life Cycle: Methodologies and Tools for the Enterprise">SDLC Blog</a></li>
+            </ul>
+        </li>
+    </ul>
+</div><!-- #primary .widget-area -->

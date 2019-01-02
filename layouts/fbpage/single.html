@@ -1,0 +1,39 @@
+{{ partial "ferdyblog/header.html" . }}
+
+<div id="container">
+    <div id="content" role="main">
+        <div class="post type-post status-publish format-standard hentry">
+            <h2 class="entry-title"><a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a></h2>
+            <div class="entry-meta">
+                <span class="meta-prep meta-prep-author">Publicado el</span> <span class="entry-date">{{ .Date.Format "2 Jan, 2006" }}</span> <span class="meta-sep">por</span> <span class="author vcard">{{ .Params.author }}</span>
+            </div><!-- .entry-meta -->
+            
+            <div class="entry-content">
+                {{ .Content }}
+            </div><!-- .entry-content -->
+
+            <div class="entry-utility">
+                <span class="cat-links">
+                    {{ if .Params.fbcategories }}
+                    <span class="entry-utility-prep entry-utility-prep-cat-links">Publicado en</span>
+                    {{ range .Params.fbcategories }}
+                        <a href="{{ "/ferdyblog/categories/" | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+                    {{ end }}
+                    {{ end }}
+
+                    {{ if .Params.fbtags }}
+                    <span class="meta-sep">|</span>
+                    <span class="entry-utility-prep entry-utility-prep-tag-links">Etiquetado</span>
+                    {{ range .Params.fbtags }}
+                        <a href="{{ "/ferdyblog/tags/" | relLangURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>
+                    {{ end }}
+                    {{ end }}
+                </span><!-- .cat-links -->
+            </div><!-- .entry-utility -->
+        </div><!-- #post-## -->
+    </div><!-- content -->
+</div><!-- container -->
+
+{{ partial "ferdyblog/sidebar.html" . }}
+
+{{ partial "ferdyblog/footer.html" . }}
