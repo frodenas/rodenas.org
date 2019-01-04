@@ -1,0 +1,65 @@
+<div id="sidebar">    
+    {{- if gt (len .Site.Taxonomies.bcategories) 0 -}}
+    <h3>Categories</h3>
+    <ul class="ul-cat">
+        {{- range $name, $taxonomy := .Site.Taxonomies.bcategories -}}
+        <li class="cat-item"><a href="{{ "/blog/categories/" | relLangURL }}{{ $name | urlize }}" >{{ $name }}</a> ({{ len $taxonomy.Pages }})</li>
+        {{- end -}}
+    </ul>
+    {{- end -}}
+    
+    <h3>Archives</h3>
+    <ul class="ul-archives">
+        {{- range $name, $taxonomy := .Site.Taxonomies.b2011 -}}
+            {{- $datename := (index $taxonomy.Pages 0).Date.Format "January 2006" -}}
+            <li><a href="{{ "/blog/2011/" | relLangURL }}{{ $name | urlize }}/">{{ $datename }}</a>&nbsp;({{ len .Pages }})</li>
+        {{- end -}}
+        {{- range $name, $taxonomy := .Site.Taxonomies.b2010 -}}
+            {{- $datename := (index $taxonomy.Pages 0).Date.Format "January 2006" -}}
+            <li><a href="{{ "/blog/2010/" | relLangURL }}{{ $name | urlize }}/">{{ $datename }}</a>&nbsp;({{ len .Pages }})</li>
+        {{- end -}}
+        {{- range $name, $taxonomy := .Site.Taxonomies.b2009 -}}
+            {{- $datename := (index $taxonomy.Pages 0).Date.Format "January 2006" -}}
+            <li><a href="{{ "/blog/2009/" | relLangURL }}{{ $name | urlize }}/">{{ $datename }}</a>&nbsp;({{ len .Pages }})</li>
+        {{- end -}}
+        {{- range $name, $taxonomy := .Site.Taxonomies.b2008 -}}
+            {{- $datename := (index $taxonomy.Pages 0).Date.Format "January 2006" -}}
+            <li><a href="{{ "/blog/2008/" | relLangURL }}{{ $name | urlize }}/">{{ $datename }}</a>&nbsp;({{ len .Pages }})</li>
+        {{- end -}}
+        {{- range $name, $taxonomy := .Site.Taxonomies.b2007 -}}
+            {{- $datename := (index $taxonomy.Pages 0).Date.Format "January 2006" -}}
+            <li><a href="{{ "/blog/2007/" | relLangURL }}{{ $name | urlize }}/">{{ $datename }}</a>&nbsp;({{ len .Pages }})</li>
+        {{- end -}}
+        {{- range $name, $taxonomy := .Site.Taxonomies.b2006 -}}
+            {{- $datename := (index $taxonomy.Pages 0).Date.Format "January 2006" -}}
+            <li><a href="{{ "/blog/2006/" | relLangURL }}{{ $name | urlize }}/">{{ $datename }}</a>&nbsp;({{ len .Pages }})</li>
+        {{- end -}}
+    </ul>
+  
+    <h3>Blogroll</h3>
+    <ul class="ul-blogroll">
+        <li><a href="http://billhiggins.us/weblog/" title="Building tools to support software development teams">Bill Higgins</a></li>
+        <li><a href="http://www.ibm.com/developerworks/blogs/page/MartinPacker" title="Mainframe Performance Topics">developerWorks: Martin Packer</a></li>
+        <li><a href="http://www.rodenas.org/ferdyblog/" title="El Diario de Ferdy">El Diario de Ferdy</a></li>
+        <li><a href="http://ianskerrett.wordpress.com/" title="Marketing at Eclipse">Ian Skerrett</a></li>
+        <li><a href="http://www.redmonk.com/jgovernor/" title="An industry analyst blog looking at software ecosystems and convergence">James Governor</a></li>
+        <li><a href="http://kellypuffs.wordpress.com/" title="Not Just For Breakfast Anymore">Kelly Drahzal</a></li>
+        <li><a href="http://www.elsua.net/" title="A KM Blog">Luis Suarez</a></li>
+        <li><a href="http://dev.eclipse.org/blogs/mike/" title="Life at Eclipse">Mike Milinkovich</a></li>
+        <li><a href="http://pmuellr.blogspot.com/" title="Patrick Mueller">Patrick Mueller</a></li>
+        <li><a href="http://brigomp.blogspot.com/">Pensamientos &Aacute;giles</a></li>
+        <li><a href="http://phkrief.wordpress.com/" title="Lets talk about…">Philippe Krief</a></li>
+        <li><a href="http://xdexavier.blogspot.com/" title="Unos y ceros. A veces, en el orden adecuado.">X de Xavier</a></li>
+    </ul>
+  
+    <h3>Stay Updated</h3>
+    <ul class="ul-syndication">
+        <li><img src="/blog/images/mini_rss.gif" alt="RSS Entries" /> <a href="http://feeds.feedburner.com/SdlcBlog">RSS Entries</a></li>
+        <li><img src="/blog/images/mini_rss.gif" alt="RSS Comments" /> <a href="http://feeds.feedburner.com/CommentsForSdlcBlog">RSS Comments</a></li>
+    </ul>
+  
+    <h3>License</h3>
+    <div class="license">
+        <a href="http://creativecommons.org/licenses/by/2.5/"><img alt="Creative Commons License" border="0" src="/blog/images/somerights.gif" /></a>
+    </div>
+</div>

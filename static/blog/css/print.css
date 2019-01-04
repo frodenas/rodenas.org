@@ -1,0 +1,293 @@
+/*  
+Theme Name: Ferdy Theme
+Theme URI: http://www.rodenas.org/blog/
+Description: Ferdy's blog theme
+Version: 1.0
+Author: Ferdy
+Author URI: http://www.rodenas.org/
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/* GENERAL */
+
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 800px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+
+#page {
+	margin: 0 auto;
+	padding: 0;
+	width: 90%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* HEADER */
+
+#header {
+	clear: both;
+}
+
+#header * {
+	margin: 0;
+	padding: 0;
+}
+
+#header .headertop {
+	display: none;
+}
+
+#header .headertitle {
+	padding: 10px;
+	text-align: left;
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+#header .headertitle h1 a {
+	color: #00469B;
+	text-decoration: none;
+}
+
+#header .livesearchpopup {
+	display: none;
+}
+
+#header .description {
+	padding-top: 5px;
+}
+
+#header .favicons {
+	display: none;
+}
+
+/* CONTENT */
+
+#content {
+	background-color: #FFFFFF;
+}
+
+#content .post {
+	clear: both;
+	padding: 10px 10px 30px 10px;
+}
+
+#content .post h2 {
+	margin: 0;
+	padding: 5px 0px 5px 0px;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+#content .post h2 a:link, #content .post h2 a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+#content .post h2 a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+#content .post-date {
+	color: #343434;
+	font-size: 75%;
+	font-style: italic;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+#content .post-content {
+	color: #333333;
+	text-align: left;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+#content .post-content acronym, #content .post-content abbr {
+	cursor: help;
+	border-bottom: 1px dotted #999999;
+}
+
+#content .post-content pre  {
+	color: #004000;
+	overflow: auto;
+	border: 1px solid #BBBBBB;
+	background-color: #FAFAFA;
+	margin: 15px 20px 15px 20px;
+	padding: 2px 5px 2px 5px;
+	font-family: "Courier New",Courier,monospace;
+}
+
+#content .post-content blockquote {
+	color: #666666;
+	display: block;
+	margin: 15px 20px 15px 20px;
+	padding: 2px 10px 2px 40px;
+	background-image: url(images/quotes.gif);
+	background-repeat: no-repeat;
+}
+
+#content .sociable {
+	display: none;
+}
+
+#content .post-metadata {
+	color: #343434;
+	font-size: 85%;
+	text-align: left;
+	margin-top: 10px;
+	padding-right: 25px;
+	font-style: italic;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+#content .post-metadata a:link, #content .post-metadata a:visited {
+	color: #00469B;
+	text-decoration: none;
+}
+
+#content .post-metadata a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+#content .post-related h3 {
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+#content .post-related ul {
+	color: #333333;
+	text-align: left;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+#content .post-comments h3 {
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+#content .post-comments h3 a:link, #content .post-comments h3 a:visited {
+	color: #00469B;
+	text-decoration: none;
+}
+
+#content .post-comments h3 a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+#content .post-comments p {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+#content .post-comments ol {
+	margin: 0px;
+	padding: 0px;
+	color: #333333;
+	text-align: left;
+	list-style: none;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+#content .post-comments li {
+	margin: 10px 0px 10px 0px;
+	padding: 5px 5px 5px 5px;
+	border: 1px dotted #BBBBBB;
+	background-color: #FAFAFA;
+}
+
+#content .post-comments cite a:link, #content .post-comments cite a:visited {
+	color: #00469B;
+	text-decoration: none;
+}
+
+#content .post-comments cite a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+#content .post-comments cite img {
+	border: 0;
+}
+
+#content .post-comments small a:link, #content .post-comments small a:visited {
+	color: #00469B;
+	text-decoration: none;
+}
+
+#content .post-comments small a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+#content .gravatar {
+	float: right;
+	padding: 1px;
+	border: 1px dotted #000000;
+	background-color: #FFFFFF;	
+}
+
+#content .tagcloud { 
+	margin: 5px 20px 5px 20px;
+	padding: 10px; 
+	text-align: justify; 
+	border: 1px solid #BBBBBB; 
+	background-color: #FAFAFA;
+}
+
+#content .tagcloud  a:link, #content .tagcloud  a:visited {
+	text-decoration: none;
+}
+
+#content .tagcloud  a:hover {
+	text-decoration: underline;
+}
+
+#content .contactform {
+	position: static;
+	overflow: hidden;
+}
+
+#content .contactleft {
+	clear: both;
+	float: left;
+	width: 25%;
+	text-align: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+	font-weight: bold;
+}
+
+#content .contactright {
+	float: right;
+	width: 70%;
+	text-align: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+#content .contacterror {
+	border: 2px solid #FF0000;
+}
+
+#content .pagination {
+	display: none;
+}
+
+/* SIDEBAR */
+
+#sidebar * {
+	display: none;
+}
+
+/* FOOTER */
+
+#footer * {
+	display: none;
+}

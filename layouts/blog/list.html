@@ -1,0 +1,21 @@
+{{ partial "blog/header.html" . }}
+
+<div id="content">
+	{{ $paginator := .Paginate (where .Pages "Type" "blog") 5 }}
+	{{ range $paginator.Pages.ByPublishDate.Reverse }}			
+	<div class="post">
+		<h2><a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a></h2>
+		<div class="post-date">{{ .Date.Format "Jan 2th, 2006" }}</div>
+		{{ .Content }}
+	</div><!-- #post-## -->
+	{{ end }}
+
+	<div class="pagination">
+		{{ template "_internal/pagination.html" . }}
+	</div><!-- #pagination -->
+
+</div><!-- content -->
+
+{{ partial "blog/sidebar.html" . }}
+
+{{ partial "blog/footer.html" . }}

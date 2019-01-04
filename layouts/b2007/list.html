@@ -1,0 +1,37 @@
+{{ partial "blog/header.html" . }}
+
+<div id="content">
+	<center><h2>Monthly Archives: {{ .Title }} </h2></center>
+	{{ $paginator := .Paginate (where .Pages "Type" "blog") }}
+	{{ range $paginator.Pages.ByPublishDate.Reverse }}	
+	<div class="post">
+		<div class="archive-content">
+			<h4><a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a></h4>
+		</div>
+		<div class="archive-metadata">
+			{{ .Date.Format "Jan 2th, 2006" }}
+            {{ if .Params.bcategories }}
+            |  Categories: 
+            {{ range .Params.bcategories }}
+            <a href="{{ "/blog/categories/" | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+            {{ end }}
+            {{ end }}
+            {{ if .Params.btags }}
+            | Tags:
+            {{ range .Params.btags }}
+            <a href="{{ "/blog/tags/" | relLangURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>
+            {{ end }}
+            {{ end }}
+		</div>		
+	</div><!-- #post-## -->
+	{{ end }}
+
+	<div class="pagination">
+		{{ template "_internal/pagination.html" . }}
+	</div><!-- #pagination -->
+
+</div><!-- content -->
+
+{{ partial "blog/sidebar.html" . }}
+
+{{ partial "blog/footer.html" . }}
