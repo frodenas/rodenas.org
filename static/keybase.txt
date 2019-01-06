@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/frodenas
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.rodenas.org
+  * I am frodenas (https://keybase.io/frodenas) on keybase.
+  * I have a public key with fingerprint 0A81 5688 0FE6 8D67 AC3D  7B8A EF47 2DF5 0C44 1555
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012065f9d99c208a91a495b114a2fa0bdab26c23a089bebc60721b1fc422821b54f90a",
+            "fingerprint": "0a8156880fe68d67ac3d7b8aef472df50c441555",
+            "host": "keybase.io",
+            "key_id": "ef472df50c441555",
+            "kid": "010161ee1b2bf423e391dcc04f0e3d1f7c2ab260c3b810b5588fdf4c31a8128d05b50a",
+            "uid": "ddd647f7e7912124ed5b52fd1af4eb00",
+            "username": "frodenas"
+        },
+        "service": {
+            "hostname": "www.rodenas.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1470736617,
+    "expire_in": 157680000,
+    "prev": "8eeccaef608748139b19ad7d37caaccee4ee305eb2f9fbc77c8209b6caf81603",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.55
+Comment: https://keybase.io/crypto
+
+yMNvAnicbZJ9TBRHGMYPUIETPSJqiFQqW6GkAtnZ76USUKAk9oolEWqBy7Efs8eK
+3J17B1exlLRigZCGWs80UE0JmoiFFMNnixgCPUhz+EFbIbV8SCsp1ra5mhZBodBd
+gv91/pmZd37PM8+8Gc+WAJ3ez5cRPx+StiPbb2SgvkT31tXm304hvE08iSSeQorg
+2gSPi9DhNBfJIpKIoABDKVJiRZYVMJThWMARLMkDQHCYxKG8yPEYJWA4hzIsD3mB
+QmkM8EASCAxj1BVJSCzKIXGIJFstULErstWp2XIMICmGQSVIMSJFcwIu0jzDQYmg
+MVEiUYEgAEmSqrDQ5tAUajiec8AE2abW1I15Ld7/8M9zo4ACEAIe4yUCwyHOAlEQ
+UEJCIS4CiRYwLTkq4DwDUJ4kGUYSJULAgZoMY0SU5Mm13CVrdqIoUgQt0ZBmAQYw
+AorqOSaJgJMIyKOoBjqgYuWKoUpLik2EVs6BlMcharVUFqDWWO0l64TL5UpYhxJs
+ikWV2xWb0ybYjquHhU6nPVHTOk/a12DIm9dtzLxsFdVOqoJSqDhkmxVJBCopOGXN
+FxA0SuMUBeg4BL5jlxVoljWCpCkGVYd2DSxVLRkIBUHtNoUyNMEAnOUBy4m0iNMC
+xwkChASEOEpCHpNYiRdoWmAwlOUpgZMYQKE4oj3shNWGJDJqTM6iWjpki5VzligQ
+KR8cyN+g89PrNm30136YTh8c+vzf2bYZngW84vqwTfKYjnLV+yZduYsxtCG2Gig7
+NvR6jOmRT4sD+69fe7brr7KBn8w77874pcV45ftn9pzpmD5268WF8E8epNP7U6a8
+9mlT+ejY0WVsxlSIl/k5F5uHLJEn5iZCO2EQctvwfdvFl6QDb7zW4Zl4mORvLqxa
+DI/K7rnsPSwHTnXN31hyV8ZuPW/qpzvN55qyQqJi9adzZ6MPfmHOSoWDlWVDC14q
+9/x7nqt3Nwdlj+ct/VBsmms9F/KrT0nZ2xh8bXRsMKalKeLQyKUU0+ubP72QT22t
+6a4MfTzsvnn5zs5H7R1XRpM++OfAH762jW9zFal5cgE8ck9X8/PZuZzexuCP9Y9r
+fX3GG1T/nuXbjftedg5OK/fLHbWGB9/m3OpMqzVcqEr+OmhqKu5gRg51ts9rdlgq
+zFJbdWyvKzziHveunWx6dfDi5CMBT+rxvjm6uzvfl5wZeGn6dN9kQ2aqM2XoO6Op
+dT83O94T0f7NyNKT4YK9eUX1usi6+LKPMlbdInl95dDQpqg6w/amgLqVuoas8ZqC
+z8IHvvr9fb37x4lMg3jYP8lj/Hu2QlrNHTNuN/DRzG5P1/Lwril3WLztS3JLe8Pn
+NTOZcWxryMObC77a+tX2EqY7LLmr+c8VPrxldFt12PH5K+klT6PLCxp+cb/APjEe
++Xeo6NgdwlQ1l93Y8h8YVcTb
+=4vBS
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/frodenas
+
+==================================================================
+
