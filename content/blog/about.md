@@ -10,12 +10,10 @@ date: 2006-10-15T21:09:26+00:00
     <td>
       <img src="/blog/images/2007/01/ferran.thumbnail.jpg" alt="Ferran Rodenas" />
     </td>
-    
     <td>
       <p>
         I&#8217;m Ferran Rodenas, a software engineering manager with more than eighteen years of experience in the design and building of application development tools for the <a href="http://en.wikipedia.org/wiki/Software_development_life_cycle">software development life cycle</a> in large enterprise environments.
       </p>
-      
       <p>
         <b>The opinions shown in this blog are only mine and do not mean any endorsement from my current employer</b> (I do NOT want to be “<a href="http://en.wikipedia.org/wiki/Dooced">dooced</a>“).
       </p>

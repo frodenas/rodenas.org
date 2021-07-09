@@ -3,6 +3,11 @@ languageCode = "en-us"
 removePathAccents = true
 googleAnalytics = "UA-88748-1"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [privacy]
   [privacy.disqus]
     disable = true
