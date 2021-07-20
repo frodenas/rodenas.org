@@ -1,7 +1,7 @@
 baseURL = "https://rodenas.org/"
 languageCode = "en-us"
 removePathAccents = true
-googleAnalytics = "UA-88748-1"
+googleAnalytics = "G-LQB3Q4JWE8"
 
 [markup]
   [markup.goldmark]
